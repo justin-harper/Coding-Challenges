@@ -34,7 +34,6 @@ function setup()
 }
 
 function draw(){
-  console.log(frameCount);
   background(51);
   strokeWeight(1);
   stroke(255);
@@ -68,7 +67,8 @@ function draw(){
     strokeWeight(1);
     fill(255);
     var guess = p.feed(training[i].input)
-    {
+    
+
       if(guess > 0){
         noFill();
       }
@@ -76,6 +76,6 @@ function draw(){
       var x = map(training[i].input[0], minX, maxX, 0, width);
       var y = map(training[i].input[1], minY, maxY, height, 0);
       ellipse(x, y, 8, 8);
-    }
+
   }
 }
