@@ -9,7 +9,7 @@ var kill = 0.062;
 
 function setup()
 {
-  createCanvas(200, 200);
+  createCanvas(500, 500);
   pixelDensity(1);
 
   grid = [];
@@ -25,9 +25,16 @@ function setup()
     }
   }
 
-  for(var i = 100; i < 110; i++)
+  var minW = (width / 2) + (floor(random(25)) * -1);
+  var maxW = (width / 2) + floor(random(25));
+  var minH = (height / 2) + (floor(random(25)) * -1);
+  var maxH = (height / 2) + floor(random(25));
+
+  console.log(minW, maxW, minH, maxH);
+
+  for(var i = minW; i < maxW; i++)
   {
-    for (var j = 100; j < 110; j++)
+    for (var j = minH; j < maxH; j++)
     {
         grid[i][j].b = 1;
     }
@@ -36,7 +43,7 @@ function setup()
 
 function draw()
 {
-  background(51);
+  //background(51);
 
   for(var x = 1; x < width - 1; x++)
   {
